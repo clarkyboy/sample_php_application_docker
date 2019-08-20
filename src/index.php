@@ -1,3 +1,21 @@
+<?php
+    require 'db/item.php';
+    if(isset($_POST['add'])){
+        $item_serial_no = $_POST['item_serial_no'];
+        $item_name = $_POST['item_name'];
+        $item_date_bought = $_POST['item_date_bought'];
+        $item_vendor = $_POST['item_vendor'];
+        $item_type = $_POST['item_type'];
+        $item_quantity = $_POST['item_quantity'];
+
+        $result = add_item($item_serial_no, $item_name, $item_date_bought, $item_quantity, $item_vendor, $item_type);
+        if($result === true)
+            echo "Added Successfully";
+        else
+            echo "Not added successfully!";
+    }
+
+?>
 <html>
 <head>
     <title>PHP Sample Output</title>
@@ -6,7 +24,7 @@
 <body>
 
 <div class="flex justify-center mt-5">
-    <form class="w-full max-w-lg">
+    <form class="w-full max-w-lg" method="post">
         <div class="flex flex-wrap -mx-3 mb-6">
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
@@ -27,7 +45,7 @@
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
                     Item Vendor
                 </label>
-                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="text" placeholder="Ideas Positive">
+                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="text" placeholder="Ideas Positive" name="item_vendor">
                 <p class="text-gray-600 text-xs italic">Make it as long and as crazy as you'd like</p>
             </div>
         </div>
@@ -36,7 +54,7 @@
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
                     Item Date Bought
                 </label>
-                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="date" placeholder="mm-dd-yy" name="item_vendor">
+                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="date"  name="item_date_bought">
             </div>
             <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
