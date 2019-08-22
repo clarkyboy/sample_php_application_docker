@@ -14,7 +14,7 @@ function add_item($item_serial_no, $item_name, $item_date_bought, $item_quantity
 }
 
 function display_item(){
-    $sql = "SELECT * FROM items";
+    $sql = "SELECT * FROM items WHERE item_status != 'D'";
     $conn = connect();
     $result = $conn->query($sql);
     $rows = $result->fetch_all(MYSQLI_ASSOC);
