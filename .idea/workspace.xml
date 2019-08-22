@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3777b28-779b-48fc-9986-99c2adac6f10" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/edit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db/connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/connection.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/db/item.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/item.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.php" afterDir="false" />
     </list>
@@ -39,7 +42,12 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -67,7 +75,8 @@
       <workItem from="1565920650250" duration="10372000" />
       <workItem from="1566183339178" duration="8970000" />
       <workItem from="1566261941285" duration="8475000" />
-      <workItem from="1566289825421" duration="1042000" />
+      <workItem from="1566289825421" duration="2488000" />
+      <workItem from="1566433639531" duration="4879000" />
     </task>
     <servers />
   </component>
