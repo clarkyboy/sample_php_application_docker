@@ -1,5 +1,7 @@
 <?php
-    require 'db/item.php';
+    //require 'db/item.php';
+    require 'db/item_oop.php';
+    $item = new Item; // this is how you make an instance of a class named Item
     if(isset($_POST['add'])){
         $item_serial_no = $_POST['item_serial_no'];
         $item_name = $_POST['item_name'];
@@ -8,7 +10,8 @@
         $item_type = $_POST['item_type'];
         $item_quantity = $_POST['item_quantity'];
 
-        $result = add_item($item_serial_no, $item_name, $item_date_bought, $item_quantity, $item_vendor, $item_type);
+        //this is how you call a function inside a class
+        $result = $item->add_item($item_serial_no, $item_name, $item_date_bought, $item_quantity, $item_vendor, $item_type);
         if($result === true)
             //echo "Added Successfully";
             header("Location: /table.php");
